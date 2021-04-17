@@ -20,11 +20,11 @@ const game = (choice) => {
     const animations = () => {
         temp = true;
         for (let x = 0; x < rpsChoices.length; x++) {
-            rpsChoices[x].classList.remove("choicesCursor")
+            rpsChoices[x].classList.remove("choicesCursor");
             rpsChoices[x].classList.add("userSelectNone");
             setTimeout(() => {
-                rpsChoices[x].classList.remove("userSelectNone")
-                rpsChoices[x].classList.add("choicesCursor")
+                rpsChoices[x].classList.remove("userSelectNone");
+                rpsChoices[x].classList.add("choicesCursor");
             }, 2100);
         }
         for (let i = 0; i < rps.length; i++) {
@@ -54,20 +54,20 @@ const game = (choice) => {
             }, 2100);
 
             setTimeout(() => {
-                winner.classList.add("fadeIn", "animate__bounceIn")
+                winner.classList.add("fadeIn", "animate__bounceIn");
             }, 2150);
 
             setTimeout(() => {
-                winner.classList.remove("fadeIn", "animate__bounceIn")
+                winner.classList.remove("fadeIn", "animate__bounceIn");
                 calculating.classList.remove("calcFadeOut", "animate__fadeOutDown");
             }, 3600);
 
             setTimeout(() => {
-                winner.classList.add("fadeOut")
+                winner.classList.add("fadeOut");
             }, 3600);
 
             setTimeout(() => {
-                winner.classList.remove("fadeOut")
+                winner.classList.remove("fadeOut");
             }, 4600);
         }
     }
@@ -103,18 +103,18 @@ const game = (choice) => {
 
     setTimeout(() => {
         const win = () => {
-            console.log("you won")
+            console.log("you won");
             userScore++;
             userScoreP.innerHTML = userScore;
         }
         const lose = () => {
-            console.log("you lost")
+            console.log("you lost");
             computerScore++;
             compScoreP.innerHTML = computerScore;
         }
 
         const draw = () => {
-            console.log("its a tie")
+            console.log("its a tie");
         }
         const compareHands = (userChoice, computerChoice) => {
             const winner = document.getElementById("result-p");
