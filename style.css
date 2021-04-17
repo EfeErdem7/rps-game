@@ -1,0 +1,369 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #1a1a1d;
+}
+
+header {
+  margin-top: 1.5rem;
+}
+
+header > h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+#calculating {
+  color: white;
+  text-align: center;
+  margin-top: 1.3rem;
+  opacity: 0;
+  user-select: none;
+}
+
+.rps {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.8rem 7rem 0 7rem;
+}
+
+#compPick {
+  transform: scaleX(-1);
+}
+
+#compPick > img{
+  -webkit-animation: fadeIn 0.3s linear forwards;
+  animation: fadeIn 0.3s linear forwards;
+}
+
+#userPick > img {
+  -webkit-animation: fadeIn 0.3s linear forwards;
+  animation: fadeIn 0.3s linear forwards;
+}
+
+.rps .choice {
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 35px;
+  transition: 0.2s all ease-in-out;
+}
+
+#s {
+  padding: 40px 35px 35px 35px;
+}
+
+.choicesCursor {
+  cursor: pointer;
+}
+
+.rps .choice:hover {
+  background-color: #fc4445;
+  border: 2px solid black;
+}
+
+.result {
+  margin: 5rem auto 1rem auto;
+  background-image: linear-gradient(to right, #ff3c7d, #ff7637);
+  width: 50rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.fadeIn {
+  -webkit-animation: fadeIn 0.5s linear forwards;
+  animation: fadeIn 0.5s linear forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  -webkit-animation: fadeOut 0.7s linear forwards;
+  animation: fadeOut 0.7s linear forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.result > p {
+  align-self: center;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.computer-part > h2 {
+  font-size: 2rem;
+}
+
+.user-part > h2 {
+  font-size: 2rem;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 3px;
+  width: fit-content;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.user-pick {
+  margin-right: 1rem;
+  margin-top: 0.45rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.comp-pick {
+  margin-left: 1rem;
+  margin-top: 0.45rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.score-board > .score-board-text {
+  align-self: center;
+  padding: 45px;
+  font-weight: 800;
+  color: white;
+  font-size: 2rem;
+  background-color: #fc4445;
+  text-transform: uppercase;
+}
+
+.usr-comp-score {
+  padding: 20px 0 5px 0;
+  color: white;
+  font-size: 2rem;
+  width: 200px;
+  user-select: none;
+}
+
+.user-part {
+  border: 2px solid white;
+  border-right: none;
+  border-radius: 50px 0 0 50px;
+}
+
+.computer-part {
+  border: 2px solid white;
+  border-radius: 0 50px 50px 0;
+  border-left: none;
+}
+
+.stop-button {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fc4445;
+  color: white;
+  width: 200px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.stop-button > div {
+  padding: 10px;
+  font-size: 1.5rem;
+  transition: 0.2s all ease-in-out;
+}
+
+.stop-button > div:hover {
+  border-radius: 3px;
+  background-color: tomato;
+}
+
+.stop-button:hover {
+  cursor: pointer;
+}
+
+.fadeInOut {
+  -webkit-animation: fadeinout 0.4s linear forwards;
+  animation: fadeinout 0.4s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.calcFadeIn {
+  -webkit-animation: calcFadeIn 0.6s linear forwards;
+  animation: calcFadeIn 0.6s linear forwards;
+}
+
+@keyframes calcFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes calcFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.calcFadeOut {
+  -webkit-animation: calcFadeOut 0.5s linear forwards;
+  animation: calcFadeOut 0.5s linear forwards;
+}
+
+@keyframes calcFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes calcFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.userSelectNone {
+  user-select: none;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 1500px) {
+  header {
+    margin-top: 1rem;
+  }
+  header > h1 {
+    font-size: 2.7rem;
+  }
+  #calculating {
+    margin: 1rem 0 1.2rem 0;
+  }
+  .rps {
+    margin: 0rem 7rem 0 7rem;
+  }
+  .rps .choice {
+    padding: 1.7rem;
+  }
+  #p {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #r {
+    padding-top: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .rps div img {
+    width: 180px;
+    height: 180px;
+  }
+  .result {
+    margin: 3rem auto 2rem auto;
+    width: 35rem;
+    height: 4rem;
+  }
+  .result > p {
+    font-size: 1.5rem;
+  }
+  .usr-comp-score {
+    padding: 28px 0 5px 0;
+  }
+  .computer-part > h2 {
+    font-size: 1.5rem;
+  }
+  #compscr {
+    font-size: 1.5rem;
+  }
+  .user-part > h2 {
+    font-size: 1.5rem;
+  }
+  #usrscr {
+    font-size: 1.5rem;
+  }
+  .score-board {
+    margin: 1rem auto 3rem auto;
+  }
+  .score-board > .score-board-text {
+    font-size: 1.6rem;
+  }
+  .stop-button {
+    width: 170px;
+  }
+  .stop-button > div {
+    font-size: 1.3rem;
+  }
+}

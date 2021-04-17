@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 id="myc">Make Your Choice</h1>
+    </header>
+    <div id="calculating">Calculating...</div>
+    <div class="rps">
+      <!-- <div id="firstSection"></div>
+      <div id="secondSection"></div>
+      <div id="thirdSection"></div> -->
+      <div class="choice choicesCursor" id="r" value="rock" onclick="game('r')">
+        <img src="/images/rock.png" alt="rock" loading="lazy"/>
+      </div>
+      <div class="choice choicesCursor" id="p" value="paper" onclick="game('p')">
+        <img src="/images/paper.png" alt="paper" loading="lazy"/>
+      </div>
+      <div class="choice choicesCursor" id="s" value="scissors" onclick="game('s')">
+        <img
+          src="/images/scissors.png"
+          alt="scissors"
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <div class="result" id="result">
+      <p id="result-p">Computer Wins !</p>
+    </div>
+    <div class="score-board">
+      <div class="user-pick" id="userPick"></div>
+      <div class="user-part usr-comp-score">
+        <h2>User</h2>
+        <p class="user-score" id="usrscr">0</p>
+      </div>
+      <span class="score-board-text">Score Board</span>
+      <div class="computer-part usr-comp-score">
+        <h2>Comp</h2>
+        <p class="comp-score" id="compscr">0</p>
+      </div>
+      <div class="comp-pick" id="compPick"></div>
+    </div>
+    <div class="stop-button" id="stopButton">
+      <div>Reset</div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
