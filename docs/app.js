@@ -83,19 +83,19 @@ const game = (choice) => {
         const userPick = document.getElementById("userPick");
         const compPick = document.getElementById("compPick");
         if (userChoice === "r") {
-            userPick.innerHTML = `<img src="images/rock.png" loading="lazy" style="margin-top: 0.5rem; height: 100px; width: 100px;">`
+            userPick.innerHTML = `<img src="./images/rock.png" loading="lazy" style="margin-top: 0.5rem; height: 100px; width: 100px;">`
         } else if (userChoice === "p") {
-            userPick.innerHTML = `<img src="images/paper.png" loading="lazy" style="margin-top: 0.25rem; height: 100px; width: 100px;">`
+            userPick.innerHTML = `<img src="./images/paper.png" loading="lazy" style="margin-top: 0.25rem; height: 100px; width: 100px;">`
         } else {
-           userPick.innerHTML = `<img src="images/scissors.png" loading="lazy" style="margin-top: 0.5rem; height: 100px; width: 100px;">`
+           userPick.innerHTML = `<img src="./images/scissors.png" loading="lazy" style="margin-top: 0.5rem; height: 100px; width: 100px;">`
         }
         setTimeout(() => {
             if (computerChoice === "r") {
-                compPick.innerHTML = `<img src="images/rock.png" loading="lazy" style=" margin-top: 0.5rem; height: 100px; width: 100px;">`
+                compPick.innerHTML = `<img src="./images/rock.png" loading="lazy" style=" margin-top: 0.5rem; height: 100px; width: 100px;">`
             } else if (computerChoice === "p") {
-                compPick.innerHTML = `<img src="images/paper.png" loading="lazy" style=" margin-top: 0.25rem; height: 100px; width: 100px;">`
+                compPick.innerHTML = `<img src="./images/paper.png" loading="lazy" style=" margin-top: 0.25rem; height: 100px; width: 100px;">`
             } else {
-                compPick.innerHTML = `<img src="images/scissors.png" loading="lazy" style=" margin-top: 0.5rem; height: 100px; width: 100px;">`
+                compPick.innerHTML = `<img src="./images/scissors.png" loading="lazy" style=" margin-top: 0.5rem; height: 100px; width: 100px;">`
             }
         }, 2100);
     }
