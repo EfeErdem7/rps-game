@@ -314,22 +314,23 @@ header > h1 {
   .rps {
     margin: 0rem 7rem 0 7rem;
   }
-  .rps .choice {
-    padding: 1.7rem;
-  }
   #p {
     padding-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
   #r {
     padding-top: 2.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  #s {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
   .rps div img {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
   }
   .result {
     margin: 3rem auto 2rem auto;
