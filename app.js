@@ -15,8 +15,8 @@ let computerScore = 0;
 let temp = false;
 const game = (choice) => {
     if (temp) return;
-    document.getElementById("userPick").innerHTML="";
-    document.getElementById("compPick").innerHTML="";
+    document.getElementById("userPick").innerHTML = "";
+    document.getElementById("compPick").innerHTML = "";
     const animations = () => {
         temp = true;
         for (let x = 0; x < rpsChoices.length; x++) {
@@ -25,7 +25,7 @@ const game = (choice) => {
             setTimeout(() => {
                 rpsChoices[x].classList.remove("userSelectNone");
                 rpsChoices[x].classList.add("choicesCursor");
-            }, 2100);
+            }, 3600);
         }
         for (let i = 0; i < rps.length; i++) {
             rps[i].classList.add("fadeInOut");
@@ -48,7 +48,6 @@ const game = (choice) => {
 
             setTimeout(() => {
                 rps[i].classList.remove("fadeInOut");
-                temp = false;
                 calculating.classList.remove("calcFadeIn", "animate__fadeInDown");
                 calculating.classList.add("calcFadeOut", "animate__fadeOutDown");
             }, 2100);
@@ -60,6 +59,7 @@ const game = (choice) => {
             setTimeout(() => {
                 winner.classList.remove("fadeIn", "animate__bounceIn");
                 calculating.classList.remove("calcFadeOut", "animate__fadeOutDown");
+                temp = false;
             }, 3600);
 
             setTimeout(() => {
@@ -87,7 +87,7 @@ const game = (choice) => {
         } else if (userChoice === "p") {
             userPick.innerHTML = `<img src="./images/paper.png" loading="lazy" style="margin-top: 0.25rem; height: 100px; width: 100px;">`
         } else {
-           userPick.innerHTML = `<img src="./images/scissors.png" loading="lazy" style="margin-top: 0.5rem; height: 100px; width: 100px;">`
+            userPick.innerHTML = `<img src="./images/scissors.png" loading="lazy" style="margin-top: 0.5rem; height: 100px; width: 100px;">`
         }
         setTimeout(() => {
             if (computerChoice === "r") {
@@ -118,46 +118,27 @@ const game = (choice) => {
         }
         const compareHands = (userChoice, computerChoice) => {
             const winner = document.getElementById("result-p");
-            if (userChoice === computerChoice) {
+            switch (userChoice + computerChoice) {
+                case "rr":
+                case "ss":
+                case "pp":
                 winner.textContent = "It is a tie";
                 draw();
                 return;
-            }
-            if (userChoice === "r") {
-                if (computerChoice === "s") {
-                    winner.textContent = "You win !";
-                    win();
-                    return;
-                } else {
-                    winner.textContent = "Computer Wins !"
-                    lose();
-                    return;
-                }
-            }
-            if (userChoice === "p") {
-                if (computerChoice === "s") {
-                    winner.textContent = "Computer Wins !"
-                    lose();
-                    return;
-                } else {
-                    winner.textContent = "You win !";
-                    win();
-                    return;
-                }
-            }
-            if (userChoice === "s") {
-                if (computerChoice === "r") {
-                    winner.textContent = "Computer Wins !"
-                    lose();
-                    return;
-                } else {
-                    winner.textContent = "You win !";
-                    win();
-                    return;
-                }
+                case "rs":
+                case "pr":
+                case "sp":
+                winner.textContent = "You Win !";
+                win();
+                return;
+                case "rp":
+                case "ps":
+                case "sr":
+                winner.textContent = "Computer wins !"
+                lose();
+                return;
             }
         };
-
         compareHands(choice, computerChoice);
     }, 2150);
 
@@ -166,8 +147,8 @@ const game = (choice) => {
 }
 
 restartButton.addEventListener("click", () => {
-    document.getElementById("userPick").innerHTML="";
-    document.getElementById("compPick").innerHTML="";
+    document.getElementById("userPick").innerHTML = "";
+    document.getElementById("compPick").innerHTML = "";
     userScoreP.innerHTML = 0;
     compScoreP.innerHTML = 0;
     userScore = 0;
