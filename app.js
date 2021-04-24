@@ -122,7 +122,7 @@ const game = (choice) => {
                 case "rr":
                 case "ss":
                 case "pp":
-                winner.textContent = "It is a tie";
+                winner.textContent = "It is a draw";
                 draw();
                 return;
                 case "rs":
